@@ -33,6 +33,10 @@ export type EmployeeDetailsProps = {
 };
 
 export function EmployeeDetails(prop: EmployeeDetailsProps) {
+  useEffect(() => {
+    document.title = "タレントマネジメントシステム - 社員詳細";
+  }, []);
+  
   const [selectedTabValue, setSelectedTabValue] =
     useState<TabPanelValue>("basicInfo");
   const employee = prop.employee;
